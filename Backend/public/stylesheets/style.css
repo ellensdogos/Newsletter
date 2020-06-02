@@ -6,3 +6,74 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+  font-size: 70px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.column {
+  width: 20%;
+  padding: 50px;
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+
+#btn-standard {
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 40%;
+  opacity: 0.9;
+  cursor: pointer;
+  text-align: center;
+}
+
+#goBackButton {
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 100%;
+  opacity: 0.9;
+  cursor: pointer;
+  text-align: center;
+  top: 20%;
+  width: 15%;
+  right: 50%;
+  position: absolute;
+}
+
+#btn-standard:hover, #goBackButton:hover {
+  opacity: 1;
+}
+
+.login {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#loginBtn {
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(82, 160, 201);
+  padding: 10px 20px;
+  width: 10%;
+}

@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "userName": "Ellen",
+        "userEmail": "ellen@hotmail.com",
+        "password": "test",
+        "subscribe": true
+    },
+
+    {
+        "id": 2,
+        "userName": "Alex",
+        "userEmail": "alex@gmail.com",
+        "password": "123",
+        "subscribe": false
+    },
+
+    {
+        "id": 2,
+        "userName": "Maja",
+        "userEmail": "maja@hotmail.com",
+        "password": "321",
+        "subscribe": true
+    }
+]
