@@ -38,7 +38,7 @@ class Verify extends React.Component {
         })
         .then(res => res.json())
         .then(data => {
-            console.log("Verifierad? ", data)
+            console.log(data)
 
             if (data.login)
             {
@@ -46,7 +46,6 @@ class Verify extends React.Component {
                 localStorage.setItem("UserId", data.userId);
                 localStorage.setItem("Subscribe", data.subscribe);
                 console.log(localStorage);
-                this.props.LoggedIn();
             }
         })
 
