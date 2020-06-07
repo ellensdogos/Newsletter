@@ -54,7 +54,7 @@ function AdminPage() {
 }
 
 function showAllUsers() {
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:9000/users')
         .then(res => res.json())
         .then(function (json) {
             page.innerHTML = "";
@@ -69,7 +69,7 @@ function showAllUsers() {
 }
 
 function showAllSubscribers() {
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:9000/users')
         .then(res => res.json())
         .then(function (json) {
             page.innerHTML = "";

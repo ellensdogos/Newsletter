@@ -3,8 +3,8 @@ var fs = require('fs');
 
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
+//Get users
+router.get('/', function (req, res, next) {
   fs.readFile('users.json', (err, data) => {
     if (err) throw err;
 
@@ -14,7 +14,8 @@ router.get('/', function(req, res, next) {
 
 });
 
-router.post('/', function(req, res, next) {
+//Create new user
+router.post('/', function (req, res, next) {
   fs.readFile('users.json', (err, data) => {
     if (err) throw err;
 
@@ -28,6 +29,9 @@ router.post('/', function(req, res, next) {
       "subscribe": req.body.subscribe
     }
 
+    let latestId = users.length;
+    newUser.id = (latestId + 1);
+
     users.push(newUser);
 
     var saveUsers = JSON.stringify(users, null, 2);
@@ -40,5 +44,25 @@ router.post('/', function(req, res, next) {
   })
 
 });
+
+router.post('/login', function (req, res, next) {
+  fs.readFile('users.json', (err, data) => {
+
+    var users = JSON.parse(data);
+    var loggedIn = false;
+    var userId;
+    var subscribe;
+
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].userName == req.body.userName && users[i].password == req.body.password) {
+        userId = i;
+        loggedIn = true;
+        subscribe = users[i].subscribe;
+      }
+    }
+
+    res.send({login, userId, subscribe});
+  })
+})
 
 module.exports = router;

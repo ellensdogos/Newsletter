@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
+import Register from './register';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = { Id: null };
+
+    var localId = localStorage.getItem("userId");
+    if (localId) {
+      this.state.Id = localId;
+    }
+  }
+
+  newUser = (userName, userEmail, password, subscribe) => {
+    var data = {
+      userName: userName,
+      userEmail: userEmail,
+      password: password,
+      subscribe: subscribe
+    };
+    fetch('http://localhost:9000/users', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(alert("Successful registration! You can now log in"));
+  }
+
+  handleLogin (Id) {
+    this.setState({Id: Id})
+    localStorage.setItem("userId", Id);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Newsletter</h1>
+        <Register newUser={this.newUser} />
+      </div>
+    )
+  }
 }
+
 
 export default App;
