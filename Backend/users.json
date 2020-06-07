@@ -19,19 +19,5 @@
     "userEmail": "maja@hotmail.com",
     "password": "321",
     "subscribe": true
-  },
-  {
-    "id": 4,
-    "userName": "test",
-    "userEmail": "test@mail.se",
-    "password": "test",
-    "subscribe": false
-  },
-  {
-    "id": 5,
-    "userName": "test",
-    "userEmail": "test@mail.se",
-    "password": "test",
-    "subscribe": true
   }
 ]
