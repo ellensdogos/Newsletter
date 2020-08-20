@@ -32,18 +32,23 @@ class Register extends React.Component {
     render() {
         return(
             <div>
+            <h4>Registrera dig</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Ange ett användarnamn: 
                         <input type="text" name="userName" value={this.state.userName} onChange={this.handleChange}/>
+                        <br/>
                         Ange din mailadress: 
                         <input type="email" name="userEmail" value={this.state.userEmail} onChange={this.handleChange}/>
+                        <br/>
                         Ange ditt lösenord: 
                         <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                        <br/>
                         Vill du prenumerera på nyhetsbrevet? 
                         <input type="checkbox" name="subscribe" checked={this.state.subscribe} onChange={this.handleChange}/>
                     </label>
-                    <input onClick="" type="submit" value="Registrera"/>
+                    <br/>
+                    <input type="submit" value="Registrera"/>
                 </form>
             </div>
         )

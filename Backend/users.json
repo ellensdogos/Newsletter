@@ -4,20 +4,48 @@
     "userName": "Ellen",
     "userEmail": "ellen@hotmail.com",
     "password": "test",
-    "subscribe": true
+    "subscribe": false
   },
   {
     "id": 2,
     "userName": "Alex",
     "userEmail": "alex@gmail.com",
     "password": "123",
-    "subscribe": false
+    "subscribe": true
   },
   {
     "id": 3,
     "userName": "Maja",
     "userEmail": "maja@hotmail.com",
     "password": "321",
+    "subscribe": false
+  },
+  {
+    "id": 4,
+    "userName": "testar",
+    "userEmail": "test@mail.se",
+    "password": "något",
     "subscribe": true
+  },
+  {
+    "id": 5,
+    "userName": "test",
+    "userEmail": "hej@mail.com",
+    "password": "test",
+    "subscribe": false
+  },
+  {
+    "id": 6,
+    "userName": "ghsjdk",
+    "userEmail": "whdjfk@asdfg",
+    "password": "sjkdf",
+    "subscribe": true
+  },
+  {
+    "id": 7,
+    "userName": "nya",
+    "userEmail": "nya@nya.com",
+    "password": "nya",
+    "subscribe": false
   }
 ]
